@@ -1,0 +1,25 @@
+server:
+  port: 8761
+
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://user:psw123@localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
+
+  server:
+    enable-self-preservation: true
+
+
+spring:
+  application:
+    name: eureka-server
+  security:
+    user:
+      name: user
+      password: psw123
